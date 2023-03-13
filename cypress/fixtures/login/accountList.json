@@ -1,0 +1,38 @@
+{
+    "accounts": [
+        {
+            "_comment": "Verify Login fail with blank username and blank password",
+            "id": 1,
+            "username": "",
+            "password": "",
+            "message": "Epic sadface: Username is required"
+        },
+        {
+            "_comment": "Verify Login fail with invalid username and valid password",
+            "id": 2,
+            "username": "abc",
+            "password": "secret_sauce",
+            "message": "Epic sadface: Username and password do not match any user in this service"
+        },
+        {
+            "_comment": "Verify Login fail with valid username and invalid password",
+            "id": 3,
+            "username": "standard_user",
+            "password": "abc",
+            "message": "Epic sadface: Username and password do not match any user in this service"
+        },
+        {
+            "_comment": "Verify Login fail with invalid username and invalid password",
+            "id": 4,
+            "username": "abc",
+            "password": "abc",
+            "message": "Epic sadface: Username and password do not match any user in this service"
+        },
+        {
+            "_comment": "Verify login success with valid username and valid password",
+            "id": 5,
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ]
+}
