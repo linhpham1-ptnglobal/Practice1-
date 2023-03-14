@@ -8,6 +8,18 @@ class HomePage{
     getLogoutLink(){
         return cy.get('a#logout_sidebar_link');
     }
+    getFilterOption(){
+        return cy.get('select[data-test="product_sort_container"] option');
+    }
+    getFilter(){
+        return cy.get('select[data-test="product_sort_container"]');
+    }
+    getActiveOption(){
+        return cy.get('span.active_option');
+    }
+    getItemPriceList(){
+        return cy.get('div.inventory_item_price');
+    }
 };
 export default HomePage;
 export function logout(){

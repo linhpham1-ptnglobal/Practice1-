@@ -24,7 +24,7 @@ describe('Login function', () => {
 
     it("Should show error message if login with blank username and blank password", function(){
         var invalidAccount = testData[0];
-        login(invalidAccount.username, invalidAccount.password);
+        cy.login(invalidAccount.username, invalidAccount.password);
         loginPage.getErrorMessage()
             .should('be.visible')
             .invoke('text')
@@ -32,7 +32,7 @@ describe('Login function', () => {
     })
     it("Should show error message if login with invalid username and valid password", function(){
         var invalidAccount = testData[1];
-        login(invalidAccount.username, invalidAccount.password);
+        cy.login(invalidAccount.username, invalidAccount.password);
         loginPage.getErrorMessage()
             .should('be.visible')
             .invoke('text')
@@ -40,7 +40,7 @@ describe('Login function', () => {
     })
     it("Should show error message if login with valid username and invalid password", function(){
         var invalidAccount = testData[2];
-        login(invalidAccount.username, invalidAccount.password);
+        cy.login(invalidAccount.username, invalidAccount.password);
         loginPage.getErrorMessage()
             .should('be.visible')
             .invoke('text')
@@ -48,7 +48,7 @@ describe('Login function', () => {
     })
     it("Should show error message if login with invalid username and invalid password", function(){
         var invalidAccount = testData[3];
-        login(invalidAccount.username, invalidAccount.password);
+        cy.login(invalidAccount.username, invalidAccount.password);
         loginPage.getErrorMessage()
             .should('be.visible')
             .invoke('text')
@@ -56,7 +56,7 @@ describe('Login function', () => {
     })
     it("Should login successfully with valid username and valid password", function(){
         var validAccount = testData[4];
-        login(validAccount.username, validAccount.password);
+        cy.login(validAccount.username, validAccount.password);
         homePage.getCartButton()
             .should('be.visible');
     })

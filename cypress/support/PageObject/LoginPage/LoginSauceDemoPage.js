@@ -13,16 +13,16 @@ class LoginSauceDemoPage {
     }
 };
 export default LoginSauceDemoPage;
-export function login(username, password){
-    const loginPage = new LoginSauceDemoPage();
-    if(username!=="" && password!==""){
-        loginPage.getUsernameTextBox()
-            .clear()
-            .type(username);
-        loginPage.getPasswordTextBox()
-            .clear()
-            .type(password);
-    }
-    loginPage.getLoginButton()
-        .click();
-}
+// export function login(username, password){
+//     const loginPage = new LoginSauceDemoPage();
+//     if(username!=="" && password!==""){
+//         loginPage.getUsernameTextBox()
+//             .clear()
+//             .type(username);
+//         loginPage.getPasswordTextBox()
+//             .clear()
+//             .type(password);
+//     }
+//     loginPage.getLoginButton()
+//         .click();
+// }
